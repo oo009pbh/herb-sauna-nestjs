@@ -1,0 +1,58 @@
+@use "sass:string";
+@use "sass:list";
+@use "sass:meta";
+
+@import 'variables';
+
+@function split($string, $separator) {
+  @if meta.type-of($string) != 'string' or meta.type-of($separator) != 'string' {
+    @warn "Invalid input: Both $string and $separator must be strings.";
+    @return ();
+  }
+
+  $list: ();
+  $end: string.index($string, $separator);
+  $string-length: string.length($string);
+
+  @while string.index($string, $separator) != null {
+    $end: string.index($string, $separator);
+    $list: list.append($list, string.slice($string, 1, $end - 1)); // 구분자 앞부분 추가
+    $string: string.slice($string, $end + 1, $string-length); // 구분자 뒷부분으로 문자열 업데이트
+  }
+
+  $list: list.append($list, $string);
+  @return $list;
+}
+
+@function ptr($px-value) {
+  @return #{$px-value / $base-font-size}rem;
+}
+
+@mixin font-style($font-family, $font-size, $font-weight, $line-height) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin font($name, $line-height: 150%) {
+  $parts: split($name, '-'); // 사용자가 정의한 구분자에 맞게 문자열을 분리
+
+  @if list.nth($parts, 1) == 'hb' {
+    font-family: $font-hb;
+  } @else if list.nth($parts, 1) == 'ng' {
+    font-family: $font-nanum-gothic;
+  }
+
+  @if list.nth($parts, 3) == 'eb' {
+    font-weight: 700;
+  } @else if list.nth($parts, 3) == 'b' {
+    font-weight: 600;
+  } @else if list.nth($parts, 3) == 'r' {
+    font-weight: 400;
+  } @else if list.nth($parts, 3) == 'l' {
+    font-weight: 300;
+  }
+  font-size: ptr(list.nth($parts, 2)); // 두 번째 부분으로 폰트 크기 설정 (px -> rem 변환)
+  line-height: $line-height;
+}
