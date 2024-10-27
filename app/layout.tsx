@@ -1,6 +1,6 @@
 import type {Metadata} from "next";
-import "./styles/globals.scss";
-import {hbFont, nanumGothicFont} from "@/app/fonts";
+import "@/app/_styles/globals.scss";
+import {hbFont, nanumGothicFont} from "./_fonts";
 
 export const metadata: Metadata = {
   title: "용문산 허브 찜질방",
@@ -13,11 +13,7 @@ export default function RootLayout({children}: Readonly<{
 }>) {
   return (
     <html lang="en">
-    <body
-      className={hbFont.className + " " + nanumGothicFont.className}
-    >
-    {children}
-    </body>
+    <body cz-shortcut-listen="false" className={hbFont.className + " " + nanumGothicFont.className}>{children}</body>
     </html>
   );
 }
