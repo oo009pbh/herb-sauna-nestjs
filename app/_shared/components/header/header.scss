@@ -1,0 +1,14 @@
+.container {
+  @include flex(center, center);
+
+  width: 100%;
+  height: ptr(90);
+  padding: 0 ptr(200);
+  gap: ptr(220);
+
+  .header_item {
+    color: $primary-01;
+    text-align: center;
+    @include font("hb-24-b");
+  }
+}

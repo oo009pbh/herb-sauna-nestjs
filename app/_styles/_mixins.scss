@@ -1,6 +1,7 @@
 @use "sass:string";
 @use "sass:list";
 @use "sass:meta";
+@use "sass:math";
 
 @import 'variables';
 
@@ -37,22 +38,32 @@
 
 @mixin font($name, $line-height: 150%) {
   $parts: split($name, '-'); // 사용자가 정의한 구분자에 맞게 문자열을 분리
+  $font-family-var: list.nth($parts, 1);
+  $font-size-var: #{list.nth($parts, 2)};
+  $font-weight-var: list.nth($parts, 3);
 
-  @if list.nth($parts, 1) == 'hb' {
+  @if $font-family-var == 'hb' {
     font-family: $font-hb;
-  } @else if list.nth($parts, 1) == 'ng' {
+  } @else if $font-family-var == 'ng' {
     font-family: $font-nanum-gothic;
   }
 
-  @if list.nth($parts, 3) == 'eb' {
+  @if $font-weight-var == 'eb' {
     font-weight: 700;
-  } @else if list.nth($parts, 3) == 'b' {
+  } @else if $font-weight-var == 'b' {
     font-weight: 600;
-  } @else if list.nth($parts, 3) == 'r' {
+  } @else if $font-weight-var == 'r' {
     font-weight: 400;
-  } @else if list.nth($parts, 3) == 'l' {
+  } @else if $font-weight-var == 'l' {
     font-weight: 300;
   }
-  font-size: ptr(list.nth($parts, 2)); // 두 번째 부분으로 폰트 크기 설정 (px -> rem 변환)
+  font-size: math.div($font-size-var, 1); // 두 번째 부분으로 폰트 크기 설정 (px -> rem 변환)
   line-height: $line-height;
+}
+
+@mixin flex($justify: flex-start, $align: stretch, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
 }
