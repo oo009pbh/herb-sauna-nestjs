@@ -6,6 +6,9 @@
   padding: 0 ptr(200);
   gap: ptr(220);
 
+  background: $white;
+  box-shadow: ptr(0) ptr(4) ptr(30) ptr(0) rgba(0, 0, 0, 0.05);
+
   .header_item {
     color: $primary-01;
     text-align: center;

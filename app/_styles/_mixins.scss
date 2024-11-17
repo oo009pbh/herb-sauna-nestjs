@@ -2,28 +2,9 @@
 @use "sass:list";
 @use "sass:meta";
 @use "sass:math";
+@import '@euid/scss-mixins';
 
 @import 'variables';
-
-@function split($string, $separator) {
-  @if meta.type-of($string) != 'string' or meta.type-of($separator) != 'string' {
-    @warn "Invalid input: Both $string and $separator must be strings.";
-    @return ();
-  }
-
-  $list: ();
-  $end: string.index($string, $separator);
-  $string-length: string.length($string);
-
-  @while string.index($string, $separator) != null {
-    $end: string.index($string, $separator);
-    $list: list.append($list, string.slice($string, 1, $end - 1)); // 구분자 앞부분 추가
-    $string: string.slice($string, $end + 1, $string-length); // 구분자 뒷부분으로 문자열 업데이트
-  }
-
-  $list: list.append($list, $string);
-  @return $list;
-}
 
 @function ptr($px-value) {
   @return #{$px-value / $base-font-size}rem;
@@ -37,9 +18,9 @@
 }
 
 @mixin font($name, $line-height: 150%) {
-  $parts: split($name, '-'); // 사용자가 정의한 구분자에 맞게 문자열을 분리
+  $parts: str-split($name, '-');
   $font-family-var: list.nth($parts, 1);
-  $font-size-var: #{list.nth($parts, 2)};
+  $font-size-var: str-to-num(list.nth($parts, 2));
   $font-weight-var: list.nth($parts, 3);
 
   @if $font-family-var == 'hb' {
@@ -57,7 +38,7 @@
   } @else if $font-weight-var == 'l' {
     font-weight: 300;
   }
-  font-size: math.div($font-size-var, 1); // 두 번째 부분으로 폰트 크기 설정 (px -> rem 변환)
+  font-size: ptr($font-size-var); // 두 번째 부분으로 폰트 크기 설정 (px -> rem 변환)
   line-height: $line-height;
 }
 

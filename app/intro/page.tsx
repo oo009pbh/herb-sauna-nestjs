@@ -1,9 +1,9 @@
-import klass from './main.module.scss';
+import klass from './intro.module.scss';
 
 export default function Home() {
   return (
     <div className={klass.container}>
-      <main>테스트</main>
+      <main>소개</main>
     </div>
   );
 }
