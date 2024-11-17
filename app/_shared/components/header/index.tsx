@@ -1,12 +1,19 @@
 import React from 'react';
-import './header.scss';
+import klass from './header.module.scss';
+import Link from 'next/link';
 
 function Header() {
   return (
-    <header className='container'>
-      <div className='header_item'>소개</div>
-      <div className='header_item'>민박</div>
-      <div className='header_item'>qna</div>
+    <header className={klass.container}>
+      <Link href={'/intro'} className={klass.header_item}>
+        소개
+      </Link>
+      <Link href={'/rooms'} className={klass.header_item}>
+        민박
+      </Link>
+      <Link href={'/qna'} className={klass.header_item}>
+        QNA
+      </Link>
     </header>
   );
 }

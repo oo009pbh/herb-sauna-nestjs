@@ -12,6 +12,7 @@
   .header_item {
     color: $primary-01;
     text-align: center;
+    text-decoration: none;
     @include font("hb-24-b");
   }
 }
