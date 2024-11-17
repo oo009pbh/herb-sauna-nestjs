@@ -12,7 +12,7 @@ function Header() {
         민박
       </Link>
       <Link href={'/qna'} className={klass.header_item}>
-        QNA
+        Q&A
       </Link>
     </header>
   );
