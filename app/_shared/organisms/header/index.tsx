@@ -5,6 +5,9 @@ import Link from 'next/link';
 function Header() {
   return (
     <header className={klass.container}>
+      <Link href={'/'} className={klass.header_item}>
+        홈
+      </Link>
       <Link href={'/intro'} className={klass.header_item}>
         소개
       </Link>
