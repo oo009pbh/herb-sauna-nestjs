@@ -1,6 +1,7 @@
 import React from 'react';
 import klass from './TopSection.module.scss';
 import Image from 'next/image';
+import { MainLeaf, MainLeafBg } from '@/app/_shared/atoms/icon';
 
 function TopSection() {
   return (
@@ -32,6 +33,10 @@ function TopSection() {
           <br />
           허브스팀으로 향기로운 찜질을 경험을 해보세요.
         </div>
+      </div>
+      <div className={klass.leaf_bg}>
+        <MainLeafBg klass={klass.main_leaf_bg} />
+        <MainLeaf klass={klass.main_leaf} imageUrl={'/bg/bg-balcony.webp'} />
       </div>
     </section>
   );

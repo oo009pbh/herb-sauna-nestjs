@@ -42,4 +42,20 @@
       @include font('hb-30-l')
     }
   }
+
+  .main_leaf {
+    position: absolute;
+    top: ptr(226);
+    left: 33%;
+    width: ptr(898);
+    height: ptr(533);
+  }
+
+  .main_leaf_bg {
+    position: absolute;
+    top: ptr(243.1);
+    left: 33%;
+    width: ptr(898);
+    height: ptr(533);
+  }
 }
