@@ -1,0 +1,22 @@
+.container {
+  width: 100%;
+  height: ptr(273);
+  background-color: $primary;
+  padding: ptr(55) ptr(200);
+
+  .title {
+    @include font('ng-24-b');
+    color: $gray-30;
+    margin-bottom: ptr(20);
+  }
+
+  .content {
+    @include flex(flex-start, flex-start, column);
+    gap: ptr(4);
+
+    .description {
+      @include font('ng-16-r');
+      color: $gray-40;
+    }
+  }
+}

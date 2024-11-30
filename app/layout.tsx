@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import '@/app/_styles/globals.scss';
 import { hbFont, nanumGothicFont } from './_fonts';
 import Header from '@organisms/header';
+import Footer from '@organisms/footer';
 
 export const metadata: Metadata = {
   title: '용문산 허브 찜질방',
@@ -23,6 +24,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
