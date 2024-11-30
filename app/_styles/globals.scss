@@ -11,3 +11,8 @@
     font-size: 14px;
   }
 }
+
+body::-webkit-scrollbar {
+  width: 0; /* 스크롤바를 숨깁니다 */
+  height: 0;
+}
