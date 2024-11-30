@@ -1,7 +1,7 @@
 import React from 'react';
 import klass from './TopSection.module.scss';
 import Image from 'next/image';
-import { MainLeaf, MainLeafBg } from '@/app/_shared/atoms/icon';
+import { MainLeaf, MainLeafBg } from '@atoms/icon';
 
 function TopSection() {
   return (

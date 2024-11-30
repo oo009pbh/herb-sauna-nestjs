@@ -26,8 +26,20 @@
       "@/*": [
         "./*"
       ],
+      "@atoms/*": [
+        "./app/_shared/components/atoms/*"
+      ],
+      "@molecules/*": [
+        "./app/_shared/components/molecules/*"
+      ],
       "@organisms/*": [
-        "./app/_shared/organisms/*"
+        "./app/_shared/components/organisms/*"
+      ],
+      "@templates/*": [
+        "./app/_shared/components/templates/*"
+      ],
+      "@utils/*": [
+        "./app/_shared/components/utils/*"
       ]
     }
   },
