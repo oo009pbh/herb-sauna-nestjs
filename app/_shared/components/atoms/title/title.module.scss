@@ -1,0 +1,20 @@
+.container {
+
+  color: $white;
+  @include font('hb-42-b');
+  position: relative;
+
+  &[data-variant="black"] {
+    color: $black;
+  }
+
+  &[data-variant="white"] {
+    color: $white;
+  }
+
+  .icon {
+    position: absolute;
+    right: ptr(-26.9);
+    bottom: 0;
+  }
+}
