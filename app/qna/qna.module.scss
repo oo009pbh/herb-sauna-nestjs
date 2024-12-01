@@ -1,4 +1,15 @@
 .container {
-  color: #000;
-  @include font("ng-42-eb");
+  padding: ptr(170) ptr(200) ptr(80);
+  @include flex(center, center, column);
+  gap: ptr(70);
+  background: $primary-02;
+
+
+  .faq_container {
+    @include flex(flex-start, flex-start, column);
+    padding: ptr(54);
+    gap: ptr(54);
+    width: 100%;
+    background: $white;
+  }
 }
