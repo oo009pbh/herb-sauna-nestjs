@@ -3,7 +3,7 @@ import klass from './TopSection.module.scss';
 import Image from 'next/image';
 import { MainLeaf, MainLeafBg } from '@atoms/icon';
 
-function TopSection() {
+export function TopSection() {
   return (
     <section className={klass.container}>
       <div className={klass.bg_left}>
@@ -41,5 +41,3 @@ function TopSection() {
     </section>
   );
 }
-
-export default TopSection;

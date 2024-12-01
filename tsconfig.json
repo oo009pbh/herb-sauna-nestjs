@@ -35,8 +35,8 @@
       "@organisms/*": [
         "./app/_shared/components/organisms/*"
       ],
-      "@templates/*": [
-        "./app/_shared/components/templates/*"
+      "@templates": [
+        "./app/_shared/components/templates"
       ],
       "@utils/*": [
         "./app/_shared/components/utils/*"

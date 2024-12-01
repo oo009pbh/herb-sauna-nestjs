@@ -1,12 +1,18 @@
 import klass from './main.module.scss';
-import TopSection from './_shared/components/templates/TopSection';
-import IntroSection from '@templates/IntroSection';
+import {
+  BlogSection,
+  IntroSection,
+  LocationSection,
+  TopSection,
+} from '@templates';
 
 export default function Home() {
   return (
     <main className={klass.container}>
       <TopSection />
       <IntroSection />
+      <BlogSection />
+      <LocationSection />
     </main>
   );
 }

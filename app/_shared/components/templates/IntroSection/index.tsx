@@ -2,7 +2,7 @@ import React from 'react';
 import klass from './IntroSection.module.scss';
 import Title from '@atoms/title';
 
-function IntroSection() {
+export function IntroSection() {
   return (
     <section className={klass.container}>
       <div className={klass.swiper}>
@@ -12,5 +12,3 @@ function IntroSection() {
     </section>
   );
 }
-
-export default IntroSection;
