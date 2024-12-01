@@ -13,8 +13,10 @@
   }
 
   .icon {
+    width: ptr(53);
+    height: ptr(41);
     position: absolute;
     right: ptr(-26.9);
-    bottom: 0;
+    bottom: ptr(-6.86);
   }
 }
