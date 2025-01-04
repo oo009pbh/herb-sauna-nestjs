@@ -46,6 +46,13 @@
   resolved "https://registry.yarnpkg.com/@euid/scss-mixins/-/scss-mixins-0.2.0.tgz#63593e10985766e506b777f6a2b302743a8e8a5d"
   integrity sha512-w/AvCn5EVF1rD2RmO4SXyRMbwno1I6kX7pw9ZjmuisdsAdjfvFD/t6nJ386hAqHiYA8Qf5T/y+9iEjC4gHMIHg==
 
+"@fxts/core@^1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@fxts/core/-/core-1.4.0.tgz#822c34e89df5ea2a7093610696e4255202890c0c"
+  integrity sha512-1NkDIUUejuaeYCrCsA86clY1si3TP6FIoNYANPfwls2H53kezIqBFfEoWDg+gGUF3kmwIW1fnL0R2O2CloXVEw==
+  dependencies:
+    tslib "^2.6.0"
+
 "@humanwhocodes/config-array@^0.13.0":
   version "0.13.0"
   resolved "https://registry.npmjs.org/@humanwhocodes/config-array/-/config-array-0.13.0.tgz"
@@ -2349,6 +2356,11 @@ supports-preserve-symlinks-flag@^1.0.0:
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
 
+swiper@^11.1.15:
+  version "11.1.15"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-11.1.15.tgz#e2258c8d38282e2f115ca463d6e8c5b84cdcf1ca"
+  integrity sha512-IzWeU34WwC7gbhjKsjkImTuCRf+lRbO6cnxMGs88iVNKDwV+xQpBCJxZ4bNH6gSrIbbyVJ1kuGzo3JTtz//CBw==
+
 tapable@^2.2.0:
   version "2.2.1"
   resolved "https://registry.npmjs.org/tapable/-/tapable-2.2.1.tgz"
@@ -2385,6 +2397,11 @@ tslib@^2.4.0:
   version "2.8.0"
   resolved "https://registry.npmjs.org/tslib/-/tslib-2.8.0.tgz"
   integrity sha512-jWVzBLplnCmoaTr13V9dYbiQ99wvZRd0vNWaDRg+aVYRcjDF3nDksxFDE/+fkXnKhpnUUkmx5pK/v8mCtLVqZA==
+
+tslib@^2.6.0:
+  version "2.8.1"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-2.8.1.tgz#612efe4ed235d567e8aba5f2a5fab70280ade83f"
+  integrity sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==
 
 type-check@^0.4.0, type-check@~0.4.0:
   version "0.4.0"

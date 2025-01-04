@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@euid/scss-mixins": "^0.2.0",
+    "@fxts/core": "^1.4.0",
     "next": "15.0.1",
     "react": "19.0.0-rc-69d4b800-20241021",
     "react-dom": "19.0.0-rc-69d4b800-20241021",
     "sanitize.css": "^13.0.0",
-    "sass": "^1.81.0"
+    "sass": "^1.81.0",
+    "swiper": "^11.1.15"
   },
   "devDependencies": {
     "@types/node": "^20",
