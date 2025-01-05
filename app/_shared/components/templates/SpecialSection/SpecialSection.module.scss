@@ -50,7 +50,7 @@
   .navigation {
     position: absolute;
 
-    @include flex('flex-right', 'center');
+    @include flex(flex-end, center);
     top: ptr(606);
     left: ptr(221);
     gap: ptr(20);

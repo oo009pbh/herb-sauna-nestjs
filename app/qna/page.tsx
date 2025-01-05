@@ -1,6 +1,6 @@
 import klass from './qna.module.scss';
 import Title from '@atoms/title';
-import Faq from '@atoms/faq';
+import FaqItem from '../_shared/components/atoms/FaqItem';
 import { FAQS } from '@/app/_shared/const';
 
 export default function Qna() {
@@ -9,7 +9,7 @@ export default function Qna() {
       <Title title={'자주 묻는 질문'} />
       <div className={klass.faq_container}>
         {FAQS.map((faq, index) => (
-          <Faq
+          <FaqItem
             key={index}
             index={index}
             title={faq.title}
