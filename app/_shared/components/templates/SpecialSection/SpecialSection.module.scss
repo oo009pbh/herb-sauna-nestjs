@@ -1,0 +1,65 @@
+.container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  .title_wrapper {
+    width: ptr(491);
+    height: ptr(759);
+    flex-shrink: 0;
+    background: $primary;
+    padding: ptr(60);
+
+    .description {
+      color: $white;
+      @include font('hb-30-l');
+    }
+  }
+
+  .swiper {
+    width: 100%;
+    position: absolute;
+    top: ptr(158);
+    left: ptr(386);
+
+    .slide {
+      width: ptr(362);
+      height: ptr(483);
+      padding: ptr(24);
+      gap: ptr(10);
+
+      .slide_image {
+        user-select: none;
+      }
+    }
+
+  }
+
+  .progressbar {
+    position: absolute;
+    top: ptr(583);
+    left: ptr(73);
+    width: ptr(232);
+    height: ptr(5);
+
+    .progressbar_fill {
+      background: $gray-30;
+    }
+  }
+
+  .navigation {
+    position: absolute;
+
+    @include flex('flex-right', 'center');
+    top: ptr(606);
+    left: ptr(221);
+    gap: ptr(20);
+
+    .arrow_icon {
+      stroke: $gray-30;
+      width: ptr(33);
+      height: ptr(33);
+      cursor: pointer;
+    }
+  }
+}

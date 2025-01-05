@@ -3,17 +3,4 @@
   height: ptr(1043);
   padding: ptr(142) 0 ptr(142) ptr(200);
 
-  .swiper {
-    width: ptr(491);
-    height: ptr(759);
-    flex-shrink: 0;
-    background: $primary;
-    padding: ptr(60);
-
-    .description {
-      color: $white;
-      @include font('hb-30-l');
-    }
-  }
-
 }
