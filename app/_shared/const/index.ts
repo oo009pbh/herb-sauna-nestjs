@@ -48,3 +48,34 @@ export const FAQS = [
       '입실가능 시간외 체크인은 불가능합니다. (Q5. 참고)',
   },
 ];
+
+export const INTRODUCTIONS = {
+  SAUNA: {
+    title: '허브 증기로 즐기는 습식 찜질',
+    src: '/bg/bg-balcony.webp',
+  },
+  SLEEP: {
+    title: '수면실',
+    src: '/bg/bg-balcony.webp',
+  },
+  HERB_TEA: {
+    title: '향긋한 허브차',
+    src: '/bg/bg-balcony.webp',
+  },
+  HERB_FOOT_BATH: {
+    title: '허브 족욕',
+    src: '/bg/bg-balcony.webp',
+  },
+  VALLEY: {
+    title: '계곡',
+    src: '/bg/bg-balcony.webp',
+  },
+  TERRACE: {
+    title: '자연속의 테라스',
+    src: '/bg/bg-balcony.webp',
+  },
+  RESTAURANT: {
+    title: '맛있는 식사가 있는 찜질방',
+    src: '/bg/bg-balcony.webp',
+  },
+};

@@ -1,0 +1,13 @@
+.container {
+  @include flex(flex-end, flex-end);
+  padding: ptr(28) ptr(32);
+  position: relative;
+
+  .title {
+    color: $white;
+    @include font('ng-32-b');
+    position: absolute;
+    bottom: ptr(32);
+    right: ptr(28);
+  }
+}
