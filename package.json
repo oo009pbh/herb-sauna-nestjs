@@ -16,7 +16,8 @@
     "react-dom": "19.0.0-rc-69d4b800-20241021",
     "sanitize.css": "^13.0.0",
     "sass": "^1.81.0",
-    "swiper": "^11.1.15"
+    "swiper": "^11.1.15",
+    "viewerjs": "^1.11.7"
   },
   "devDependencies": {
     "@types/node": "^20",
