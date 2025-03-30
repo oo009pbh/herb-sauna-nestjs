@@ -2,4 +2,16 @@
   width: 100%;
   height: ptr(455);
   padding: ptr(64) 0 ptr(64) ptr(200);
+
+  background: $primary-02;
+
+  .swiper {
+    width: 100%;
+    margin-top: ptr(24);
+
+    .slide {
+      width: ptr(362);
+      height: ptr(240);
+    }
+  }
 }

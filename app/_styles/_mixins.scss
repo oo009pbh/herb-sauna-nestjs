@@ -48,3 +48,11 @@
   align-items: $align;
   flex-direction: $direction;
 }
+
+@mixin line-limit($lines: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
