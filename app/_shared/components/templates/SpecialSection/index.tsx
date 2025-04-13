@@ -23,7 +23,7 @@ export function SpecialSection() {
       <Swiper
         modules={[Navigation, Pagination]}
         className={klass.swiper}
-        spaceBetween={24}
+        spaceBetween={0}
         slidesPerView={'auto'}
         loop={true}
         pagination={{

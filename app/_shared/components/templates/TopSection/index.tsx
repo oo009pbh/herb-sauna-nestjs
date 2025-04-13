@@ -25,7 +25,6 @@ export function TopSection() {
           height={605}
         />
       </div>
-      <div className={klass.bg_right}></div>
       <div className={klass.title_wrapper}>
         <div className={klass.title}>용문산허브찜질방</div>
         <div className={klass.description}>
