@@ -1,15 +1,36 @@
-.container {
-  padding: ptr(170) ptr(200) ptr(80);
-  @include flex(center, center, column);
-  gap: ptr(70);
-  background: $primary-02;
+@media (min-width: 481px) {
+  .container {
+    padding: ptr(170) ptr(200) ptr(80);
+    @include flex(center, center, column);
+    gap: ptr(70);
+    background: $primary-02;
 
 
-  .faq_container {
-    @include flex(flex-start, flex-start, column);
-    padding: ptr(54);
-    gap: ptr(54);
-    width: 100%;
-    background: $white;
+    .faq_container {
+      @include flex(flex-start, flex-start, column);
+      padding: ptr(54);
+      gap: ptr(54);
+      width: 100%;
+      background: $white;
+    }
   }
 }
+
+@media (max-width: 480px) {
+  .container {
+    padding: ptr(112) ptr(20);
+    @include flex(center, center, column);
+    gap: ptr(28);
+    background: $primary-02;
+
+
+    .faq_container {
+      @include flex(flex-start, flex-start, column);
+      padding: ptr(28) ptr(20);
+      gap: ptr(20);
+      width: 100%;
+      background: $white;
+    }
+  }
+}
+
