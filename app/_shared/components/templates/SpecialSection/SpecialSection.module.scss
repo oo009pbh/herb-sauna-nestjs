@@ -1,66 +1,134 @@
-.container {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-
-  .title_wrapper {
-    width: ptr(491);
-    height: ptr(759);
-    flex-shrink: 0;
-    background: $primary;
-    padding: ptr(60);
-
-    .description {
-      color: $white;
-      @include font('hb-30-l');
-    }
-  }
-
-  .swiper {
+@media (min-width: 481px) {
+  .container {
     width: 100%;
-    position: absolute;
-    top: ptr(158);
-    left: ptr(386);
+    position: relative;
+    overflow: hidden;
 
-    .slide {
-      width: ptr(362);
-      height: ptr(483);
-      padding: ptr(24);
-      gap: ptr(10);
-      margin-right: ptr(24);
+    .title_wrapper {
+      width: ptr(491);
+      height: ptr(759);
+      flex-shrink: 0;
+      background: $primary;
+      padding: ptr(60);
 
-      .slide_image {
-        user-select: none;
+      .description {
+        color: $white;
+        @include font('hb-30-l');
       }
     }
 
-  }
+    .swiper {
+      width: 100%;
+      position: absolute;
+      top: ptr(158);
+      left: ptr(386);
 
-  .progressbar {
-    position: absolute;
-    top: ptr(583);
-    left: ptr(73);
-    width: ptr(232);
-    height: ptr(5);
+      .slide {
+        width: ptr(362);
+        height: ptr(483);
+        padding: ptr(24);
+        gap: ptr(10);
+        margin-right: ptr(24);
+        border-radius: ptr(8);
 
-    .progressbar_fill {
-      background: $gray-30;
+        .slide_image {
+          user-select: none;
+
+          border-radius: ptr(8);
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 24.12%, rgba(0, 0, 0, 0.80) 109.68%);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
+
+    }
+
+    .progressbar {
+      position: absolute;
+      top: ptr(583);
+      left: ptr(73);
+      width: ptr(232);
+      height: ptr(5);
+
+      .progressbar_fill {
+        background: $gray-30;
+      }
+    }
+
+    .navigation {
+      position: absolute;
+
+      @include flex(flex-end, center);
+      top: ptr(606);
+      left: ptr(221);
+      gap: ptr(20);
+
+      .arrow_icon {
+        stroke: $gray-30;
+        width: ptr(33);
+        height: ptr(33);
+        cursor: pointer;
+      }
     }
   }
+}
 
-  .navigation {
-    position: absolute;
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
 
-    @include flex(flex-end, center);
-    top: ptr(606);
-    left: ptr(221);
-    gap: ptr(20);
+    .title_wrapper {
+      width: ptr(172);
+      height: ptr(417);
+      flex-shrink: 0;
+      background: $primary;
+      padding: ptr(20) 0 ptr(28) ptr(21);
 
-    .arrow_icon {
-      stroke: $gray-30;
-      width: ptr(33);
-      height: ptr(33);
-      cursor: pointer;
+      .description {
+        color: $white;
+        @include font('hb-15-l');
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      position: absolute;
+      top: ptr(102);
+      left: ptr(104);
+
+      .slide {
+        width: ptr(191);
+        height: ptr(255);
+        padding: ptr(12);
+        gap: ptr(10);
+        margin-right: ptr(16);
+        border-radius: ptr(8);
+
+        .slide_image {
+          user-select: none;
+
+          border-radius: ptr(8);
+          background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 24.12%, rgba(0, 0, 0, 0.80) 109.68%);
+          box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.25);
+        }
+      }
+    }
+
+    .progressbar {
+      position: absolute;
+      bottom: ptr(28);
+      left: ptr(20);
+      width: ptr(128);
+      height: ptr(3);
+
+      .progressbar_fill {
+        background: $gray-30;
+      }
+    }
+
+    .navigation {
+      display: none;
     }
   }
 }

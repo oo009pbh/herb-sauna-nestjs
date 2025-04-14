@@ -1,6 +1,14 @@
-.container {
-  width: 100%;
-  height: ptr(1043);
-  padding: ptr(142) 0 ptr(142) ptr(200);
+@media (min-width: 481px) {
+  .container {
+    width: 100%;
+    height: ptr(1043);
+    padding: ptr(142) 0 ptr(142) ptr(200);
+  }
+}
 
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: ptr(64) 0;
+  }
 }

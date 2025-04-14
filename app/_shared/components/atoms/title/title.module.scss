@@ -1,22 +1,49 @@
-.container {
-
-  color: $white;
-  @include font('hb-42-b');
-  position: relative;
-
-  &[data-variant="black"] {
-    color: $black;
-  }
-
-  &[data-variant="white"] {
+@media (min-width: 481px) {
+  .container {
     color: $white;
-  }
+    @include font('hb-42-b');
+    position: relative;
 
-  .icon {
-    width: ptr(53);
-    height: ptr(41);
-    position: absolute;
-    right: ptr(-26.9);
-    bottom: ptr(-6.86);
+    &[data-variant="black"] {
+      color: $black;
+    }
+
+    &[data-variant="white"] {
+      color: $white;
+    }
+
+    .icon {
+      width: ptr(53);
+      height: ptr(41);
+      position: absolute;
+      right: ptr(-26.9);
+      bottom: ptr(-6.86);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    display: block;
+    color: $white;
+    width: fit-content;
+    @include font('hb-28-b');
+    position: relative;
+
+    &[data-variant="black"] {
+      color: $black;
+    }
+
+    &[data-variant="white"] {
+      color: $white;
+    }
+
+    .icon {
+      width: ptr(53);
+      height: ptr(41);
+      position: absolute;
+      right: ptr(-25.9);
+      bottom: ptr(-6.86);
+    }
   }
 }
