@@ -1,46 +1,97 @@
-.container {
-  padding: ptr(24) ptr(20);
+@media (min-width: 481px) {
+  .container {
+    padding: ptr(24) ptr(20);
 
-  border-radius: ptr(10);
-  background: $white;
-  width: ptr(362);
-  height: ptr(240);
+    border-radius: ptr(10);
+    background: $white;
+    width: ptr(362);
+    height: ptr(240);
 
-  a {
-    text-decoration: none;
-  }
-
-  .title {
-    @include font('ng-24-b');
-    @include line-limit(1);
-    width: 100%;
-    color: $gray-100;
-    margin-bottom: ptr(10);
-  }
-
-  .content {
-    @include font('ng-20-r');
-    width: 100%;
-    color: $gray-90;
-    margin-bottom: ptr(20);
-    @include line-limit(3);
-  }
-
-  .profile {
-    width: 100%;
-    @include flex(space-between, center);
-    gap: ptr(10);
-
-    .user_name {
-      @include font('ng-16-r');
-      color: $gray-70;
-      @include line-limit(1);
+    a {
+      text-decoration: none;
     }
 
-    .created_at {
+    .title {
+      @include font('ng-24-b');
+      @include line-limit(1);
+      width: 100%;
+      color: $gray-100;
+      margin-bottom: ptr(10);
+    }
+
+    .content {
+      @include font('ng-20-r');
+      width: 100%;
+      color: $gray-90;
+      margin-bottom: ptr(20);
+      @include line-limit(3);
+    }
+
+    .profile {
+      width: 100%;
+      @include flex(space-between, center);
+      gap: ptr(10);
+
+      .user_name {
+        @include font('ng-16-r');
+        color: $gray-70;
+        @include line-limit(1);
+      }
+
+      .created_at {
+        @include font('ng-16-r');
+        color: $gray-70;
+        width: ptr(88);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: ptr(24) ptr(20);
+
+    border-radius: ptr(10);
+    background: $white;
+    width: ptr(252);
+    height: ptr(266);
+
+    a {
+      text-decoration: none;
+    }
+
+    .title {
+      @include font('ng-20-b');
+      @include line-limit(2);
+      width: 100%;
+      color: $gray-100;
+      margin-bottom: ptr(10);
+    }
+
+    .content {
       @include font('ng-16-r');
-      color: $gray-70;
-      width: ptr(88);
+      width: 100%;
+      color: $gray-90;
+      margin-bottom: ptr(20);
+      @include line-limit(3);
+    }
+
+    .profile {
+      width: 100%;
+      @include flex(flex-start, flex-start, column);
+      gap: ptr(10);
+
+      .user_name {
+        @include font('ng-16-r');
+        color: $gray-70;
+        @include line-limit(1);
+      }
+
+      .created_at {
+        @include font('ng-16-r');
+        color: $gray-70;
+        width: ptr(88);
+      }
     }
   }
 }

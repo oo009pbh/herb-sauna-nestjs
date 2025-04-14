@@ -1,17 +1,40 @@
-.container {
-  width: 100%;
-  height: ptr(455);
-  padding: ptr(64) 0 ptr(64) ptr(200);
-
-  background: $primary-02;
-
-  .swiper {
+@media (min-width: 481px) {
+  .container {
     width: 100%;
-    margin-top: ptr(24);
+    height: ptr(455);
+    padding: ptr(64) 0 ptr(64) ptr(200);
 
-    .slide {
-      width: ptr(362);
-      height: ptr(240);
+    background: $primary-02;
+
+    .swiper {
+      width: 100%;
+      margin-top: ptr(24);
+
+      .slide {
+        width: ptr(362);
+        height: ptr(240);
+      }
+    }
+  }
+}
+
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: ptr(460);
+    padding: ptr(64) ptr(20);
+
+    background: $primary-02;
+
+    .swiper {
+      width: 100%;
+      margin-top: ptr(24);
+
+      .slide {
+        width: ptr(252);
+        height: ptr(266);
+      }
     }
   }
 }
