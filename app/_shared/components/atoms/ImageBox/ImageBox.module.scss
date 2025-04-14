@@ -1,13 +1,31 @@
-.container {
-  @include flex(flex-end, flex-end);
-  padding: ptr(28) ptr(32);
-  position: relative;
+@media (min-width: 481px) {
+  .container {
+    @include flex(flex-end, flex-end);
+    padding: ptr(28) ptr(32);
+    position: relative;
 
-  .title {
-    color: $white;
-    @include font('ng-32-b');
-    position: absolute;
-    bottom: ptr(32);
-    right: ptr(28);
+    .title {
+      color: $white;
+      @include font('ng-32-b');
+      position: absolute;
+      bottom: ptr(32);
+      right: ptr(28);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    @include flex(flex-end, flex-end);
+    padding: ptr(14) ptr(16);
+    position: relative;
+
+    .title {
+      color: $white;
+      @include font('ng-16-b');
+      position: absolute;
+      bottom: ptr(16);
+      right: ptr(14);
+    }
   }
 }

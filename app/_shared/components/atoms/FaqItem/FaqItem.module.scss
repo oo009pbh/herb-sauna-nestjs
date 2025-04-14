@@ -1,5 +1,4 @@
 @media (min-width: 481px) {
-
   .faq_item {
     width: 100%;
     @include flex(flex-start, flex-start, column);
@@ -128,5 +127,4 @@
       }
     }
   }
-
 }

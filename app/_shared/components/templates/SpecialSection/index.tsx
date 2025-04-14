@@ -2,9 +2,9 @@
 
 import klass from './SpecialSection.module.scss';
 import Title from '@atoms/title';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -20,6 +20,8 @@ export function SpecialSection() {
         <Title title={'특별한 점'} variant={'white'} />
       </div>
 
+      <div className={klass.progressbar}></div>
+
       <Swiper
         modules={[Navigation, Pagination]}
         className={klass.swiper}
@@ -31,7 +33,7 @@ export function SpecialSection() {
           type: 'progressbar',
           clickable: true,
           horizontalClass: klass.progressbar,
-          renderProgressbar: function (progressbarFillClass) {
+          renderProgressbar: function(progressbarFillClass) {
             return `
               <span class="${progressbarFillClass} ${klass.progressbar_fill}"></span>
             `;
@@ -59,7 +61,6 @@ export function SpecialSection() {
         )}
       </Swiper>
 
-      <div className={klass.progressbar}></div>
 
       <div className={klass.navigation}>
         <LeftArrow klass={klass.arrow_icon + ' left'} />
