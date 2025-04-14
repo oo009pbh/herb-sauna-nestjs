@@ -16,7 +16,6 @@ function NaverMap() {
 
       const mapOptions = {
         center: new naver.maps.LatLng(SAUNA_LOCATION.LAT, SAUNA_LOCATION.LNG),
-        zoomControl: true,
         zoom: 16,
       };
       const map = new naver.maps.Map('map', mapOptions);
@@ -45,7 +44,7 @@ function NaverMap() {
     <>
       <div
         id='map'
-        style={{ width: '100%', height: '500px' }}
+        style={{ width: '100%' }}
         className={klass.container}
       ></div>
 

@@ -1,27 +1,58 @@
-.container {
-  width: 100%;
-  height: ptr(1069);
-  padding: ptr(175) ptr(200) ptr(220) ptr(200);
+@media (min-width: 481px) {
+  .container {
+    width: 100%;
+    height: ptr(1069);
+    padding: ptr(175) ptr(200) ptr(220) ptr(200);
 
-  .content {
-    margin-top: ptr(24);
-    @include flex(space-between, flex-end);
-    gap: ptr(24);
+    .content {
+      margin-top: ptr(24);
+      @include flex(space-between, flex-end);
+      gap: ptr(24);
 
-    .title {
-      @include font('ng-32-b');
-      color: $gray-100;
-      margin-bottom: ptr(20);
+      .title {
+        @include font('ng-32-b');
+        color: $gray-100;
+        margin-bottom: ptr(20);
+      }
+
+      .description {
+        @include flex(flex-start, flex-start, column);
+        gap: ptr(12);
+        width: ptr(618);
+
+        .row {
+          @include font('ng-24-r');
+          color: $gray-90;
+        }
+      }
     }
+  }
+}
 
-    .description {
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: ptr(64) ptr(20);
+
+    .content {
+      margin-top: ptr(24);
       @include flex(flex-start, flex-start, column);
-      gap: ptr(12);
-      width: ptr(618);
-      
-      .row {
-        @include font('ng-24-r');
-        color: $gray-90;
+      gap: ptr(20);
+
+      .title {
+        @include font('ng-20-b');
+        color: $gray-100;
+        margin-bottom: ptr(10);
+      }
+
+      .description {
+        @include flex(flex-start, flex-start, column);
+        gap: ptr(8);
+
+        .row {
+          @include font('ng-16-r');
+          color: $gray-90;
+        }
       }
     }
   }

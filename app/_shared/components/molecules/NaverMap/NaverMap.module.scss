@@ -1,4 +1,13 @@
-.container {
-  width: ptr(879);
-  height: ptr(587);
+@media (min-width: 481px) {
+  .container {
+    width: ptr(879);
+    height: ptr(587);
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: ptr(320);
+    height: ptr(214);
+  }
 }
