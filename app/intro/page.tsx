@@ -15,7 +15,7 @@ export default function Home() {
           INTRODUCTIONS,
           values,
           map(({ title, src }) => (
-            <ImageBox title={title} src={src} customKlass={klass.image_box} />
+            <ImageBox title={title} src={src} key={`${title}`} customKlass={klass.image_box} />
           )),
           toArray
         )}

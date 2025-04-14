@@ -1,70 +1,146 @@
-.container {
-  width: 100%;
-  height: 100svh;
-  max-height: ptr(1000);
-  padding: ptr(190) ptr(201);
-  position: relative;
-  background: $primary-02;
+@media (min-width: 481px) {
+  .container {
+    width: 100%;
+    height: 100svh;
+    max-height: ptr(1000);
+    padding: ptr(190) ptr(201);
+    position: relative;
+    background: $primary-02;
 
-  .bg_left {
-    position: absolute;
-    top: ptr(110);
-    left: 0;
-    width: ptr(550);
-    height: ptr(559);
-
-    .bg_left_image {
+    .bg_left {
+      position: absolute;
+      top: ptr(110);
+      left: 0;
       width: ptr(550);
       height: ptr(559);
+
+      .bg_left_image {
+        width: ptr(550);
+        height: ptr(559);
+      }
     }
-  }
 
-  .bg_right {
-    position: absolute;
-    top: ptr(201);
-    right: 0;
-    width: ptr(544);
-    height: ptr(605);
-
-    .bg_right_image {
+    .bg_right {
+      position: absolute;
+      top: ptr(201);
+      right: 0;
       width: ptr(544);
       height: ptr(605);
-    }
-  }
 
-  .title_wrapper {
-    .title {
-      color: $gray-100;
-      @include font('hb-68-b')
+      .bg_right_image {
+        width: ptr(544);
+        height: ptr(605);
+      }
     }
 
-    .description {
-      color: $gray-100;
-      @include font('hb-30-l')
-    }
-  }
+    .title_wrapper {
+      .title {
+        color: $gray-100;
+        @include font('hb-68-b')
+      }
 
-  .leaf_bg {
-    position: absolute;
-    top: ptr(226);
-    right: ptr(284);
-    width: ptr(991);
-    height: ptr(634);
-
-    .main_leaf {
-      position: relative;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
+      .description {
+        color: $gray-100;
+        @include font('hb-30-l')
+      }
     }
 
-    .main_leaf_bg {
+    .leaf_bg {
       position: absolute;
-      top: ptr(17.51);
-      left: ptr(5.55);
-      width: 100%;
-      height: 100%;
+      top: ptr(226);
+      right: ptr(284);
+      width: ptr(991);
+      height: ptr(634);
+
+      .main_leaf {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .main_leaf_bg {
+        position: absolute;
+        top: ptr(17.51);
+        left: ptr(5.55);
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    height: 100svh;
+    position: relative;
+    background: $primary-02;
+    padding: ptr(108) ptr(20);
+
+    .bg_left {
+      position: absolute;
+      top: ptr(102);
+      left: ptr(-100);
+      width: ptr(333);
+      height: ptr(229);
+
+      .bg_left_image {
+        width: ptr(333);
+        height: ptr(229);
+      }
+    }
+
+    .bg_right {
+      position: absolute;
+      top: ptr(333);
+      right: 0;
+      width: ptr(220);
+      height: ptr(151);
+
+      .bg_right_image {
+        width: ptr(220);
+        height: ptr(151);
+      }
+    }
+
+    .title_wrapper {
+      .title {
+        color: $gray-100;
+        @include font('hb-32-b')
+      }
+
+      .description {
+        color: $gray-100;
+        @include font('hb-18-l')
+      }
+    }
+
+    .leaf_bg {
+      position: absolute;
+      top: ptr(278);
+      left: 50%;
+      width: ptr(330);
+      height: ptr(180);
+
+      transform: translate(-50%, 0);
+
+      .main_leaf {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .main_leaf_bg {
+        position: absolute;
+        top: ptr(5.65);
+        left: ptr(1.71);
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
