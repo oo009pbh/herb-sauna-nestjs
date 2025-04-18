@@ -8,8 +8,7 @@ import React from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import Image from 'next/image';
-import { map, pipe, range, toArray } from '@fxts/core';
+import { concat, flat, map, pipe, toArray, zipWithIndex } from '@fxts/core';
 import { LeftArrow, RightArrow } from '@atoms/icon';
 import { SPECIALS } from '@/app/_shared/const';
 
@@ -47,8 +46,9 @@ export function SpecialSection() {
       >
         {pipe(
           SPECIALS,
-          map(({ src, title, sub_title }) => (
-            <SwiperSlide className={klass.slide} key={`special-slide${title}`}>
+          zipWithIndex,
+          map(([index, { src, title, sub_title }] ) => (
+            <SwiperSlide className={klass.slide} key={`special-slide-${index}`}>
               <div className={klass.slide_image} style={{ backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 24.12%, rgba(0, 0, 0, 0.80) 109.68%), url(${src})`}}>
                 <div className={klass.title}>{title}</div>
                 <div className={klass.sub_title}>{sub_title}</div>

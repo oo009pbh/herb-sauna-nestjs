@@ -19,7 +19,7 @@
     }
 
     .swiper {
-      width: 100%;
+      width: calc(100% - #{ptr(158)});
       position: absolute;
       top: ptr(158);
       left: ptr(386);
