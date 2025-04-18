@@ -1,6 +1,6 @@
 @import "~sanitize.css";
 
-@media (max-width: 1920px) {
+@media (min-width: 481px) {
   html {
     font-size: clamp(0px, 0.729vw, 16px);
   }

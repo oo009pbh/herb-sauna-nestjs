@@ -2,15 +2,16 @@
 
 import klass from './SpecialSection.module.scss';
 import Title from '@atoms/title';
-import { Swiper, SwiperSlide, SwiperRef } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import Image from 'next/image';
 import { map, pipe, range, toArray } from '@fxts/core';
 import { LeftArrow, RightArrow } from '@atoms/icon';
+import { SPECIALS } from '@/app/_shared/const';
 
 export function SpecialSection() {
   return (
@@ -25,7 +26,7 @@ export function SpecialSection() {
       <Swiper
         modules={[Navigation, Pagination]}
         className={klass.swiper}
-        spaceBetween={0}
+        spaceBetween={24}
         slidesPerView={'auto'}
         loop={true}
         pagination={{
@@ -33,7 +34,7 @@ export function SpecialSection() {
           type: 'progressbar',
           clickable: true,
           horizontalClass: klass.progressbar,
-          renderProgressbar: function(progressbarFillClass) {
+          renderProgressbar: function (progressbarFillClass) {
             return `
               <span class="${progressbarFillClass} ${klass.progressbar_fill}"></span>
             `;
@@ -44,23 +45,19 @@ export function SpecialSection() {
           nextEl: `.${klass.navigation} > .right`,
         }}
       >
-        {/* TODO: 이미지들 변경하고, 소개글 추가하기 */}
         {pipe(
-          range(7),
-          map((index) => (
-            <SwiperSlide className={klass.slide} key={`special-slide${index}`}>
-              <Image
-                className={klass.slide_image}
-                alt={'예시 이미지'}
-                src={'/bg/bg-balcony.webp'}
-                fill={true}
-              />
+          SPECIALS,
+          map(({ src, title, sub_title }) => (
+            <SwiperSlide className={klass.slide} key={`special-slide${title}`}>
+              <div className={klass.slide_image} style={{ backgroundImage: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 24.12%, rgba(0, 0, 0, 0.80) 109.68%), url(${src})`}}>
+                <div className={klass.title}>{title}</div>
+                <div className={klass.sub_title}>{sub_title}</div>
+              </div>
             </SwiperSlide>
           )),
           toArray
         )}
       </Swiper>
-
 
       <div className={klass.navigation}>
         <LeftArrow klass={klass.arrow_icon + ' left'} />

@@ -175,3 +175,41 @@ export const BLOGS = [
     postdate: '20230525',
   },
 ];
+
+export const SPECIALS = [
+  {
+    title: '허브족욕',
+    sub_title: '피로를 풀어주는 허브족욕',
+    src: '/bg/bg-sauna-1.webp',
+  },
+  {
+    title: '허브 찜질방',
+    sub_title: '허브를 이용한 습식 찜질방',
+    src: '/bg/bg-sauna-2.webp',
+  },
+  {
+    title: '야외 숯불구이',
+    sub_title: '야외에서 즐기는 바베큐',
+    src: '/bg/bg-sauna-0.webp',
+  },
+  {
+    title: '식당',
+    sub_title: '다양하고 맛있는 식사',
+    src: '/bg/bg-card-7.webp',
+  },
+  {
+    title: '계곡',
+    sub_title: '찜질 후 시원한 계곡',
+    src: '/bg/bg-card-2.webp',
+  },
+  {
+    title: '야외 테라스',
+    sub_title: '자연속 테라스',
+    src: '/bg/bg-balcony.webp',
+  },
+  {
+    title: '허브차',
+    sub_title: '향그러운 허브차',
+    src: '/bg/bg-herb-tea.webp',
+  },
+];

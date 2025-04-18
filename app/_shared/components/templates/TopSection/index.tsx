@@ -35,7 +35,7 @@ export function TopSection() {
       </div>
       <div className={klass.leaf_bg}>
         <MainLeafBg klass={klass.main_leaf_bg} />
-        <MainLeaf klass={klass.main_leaf} imageUrl={'/bg/bg-herb-steam.webp'} />
+        <MainLeaf klass={klass.main_leaf} imageUrl={'/bg/bg-main.webp'} />
       </div>
     </section>
   );
