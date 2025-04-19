@@ -27,7 +27,7 @@ export const metadata: Metadata = {
   robots: 'index, follow',
   icons: {
     icon: '/herb_sauna_logo.ico',
-    apple: '/apple-touch-icon.png',
+    apple: '/herb_sauna_logo.png',
   },
   openGraph: {
     title: '용문산 허브 찜질방',
