@@ -52,31 +52,31 @@ export const FAQS = [
 export const INTRODUCTIONS = {
   SAUNA: {
     title: '허브 증기로 즐기는 습식 찜질',
-    src: '/bg/bg-balcony.webp',
+    src: '/bg/bg-sauna-49.webp',
   },
   SLEEP: {
     title: '수면실',
-    src: '/bg/bg-balcony.webp',
+    src: '/bg/bg-sauna-40.webp',
   },
   HERB_TEA: {
     title: '향긋한 허브차',
-    src: '/bg/bg-balcony.webp',
+    src: '/bg/bg-herb-tea.webp',
   },
   HERB_FOOT_BATH: {
     title: '허브 족욕',
-    src: '/bg/bg-balcony.webp',
+    src: '/bg/bg-sauna-1.webp',
   },
   VALLEY: {
     title: '계곡',
-    src: '/bg/bg-balcony.webp',
+    src: '/bg/bg-card-1.webp',
   },
   TERRACE: {
     title: '자연속의 테라스',
-    src: '/bg/bg-balcony.webp',
+    src: '/bg/bg-sauna-77.webp',
   },
   RESTAURANT: {
     title: '맛있는 식사가 있는 찜질방',
-    src: '/bg/bg-balcony.webp',
+    src: '/bg/bg-card-8.webp',
   },
 };
 

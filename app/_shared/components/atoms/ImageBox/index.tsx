@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from 'react';
 import klass from './ImageBox.module.scss';
-import Image from 'next/image';
 import Viewer from 'viewerjs';
 import 'viewerjs/dist/viewer.css';
 
@@ -31,8 +30,7 @@ function ImageBox({
   }, []);
 
   return (
-    <div ref={containerRef} className={`${customKlass} ${klass.container}`}>
-      <Image alt={''} src={src} fill={true} />
+    <div ref={containerRef} className={`${customKlass} ${klass.container}`} style={{background: `linear-gradient(180deg, rgba(0, 0, 0, 0.00) 41.43%, rgba(0, 0, 0, 0.50) 87.85%), linear-gradient(0deg, rgba(0, 0, 0, 0.10) 0%, rgba(0, 0, 0, 0.10) 100%),url('${src}') lightgray 50% / cover no-repeat`}}>
       <div className={klass.title}>{title}</div>
     </div>
   );
