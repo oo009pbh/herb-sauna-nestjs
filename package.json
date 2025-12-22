@@ -12,9 +12,9 @@
     "@euid/scss-mixins": "^0.2.0",
     "@fxts/core": "^1.4.0",
     "axios": "^1.8.4",
-    "next": "15.0.1",
-    "react": "19.0.0-rc-69d4b800-20241021",
-    "react-dom": "19.0.0-rc-69d4b800-20241021",
+    "next": "^16.1.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "sanitize.css": "^13.0.0",
     "sass": "^1.81.0",
     "swiper": "^11.1.15",
@@ -23,10 +23,10 @@
   "devDependencies": {
     "@types/navermaps": "^3.7.8",
     "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "eslint": "^8",
-    "eslint-config-next": "15.0.1",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "^16.1.0",
     "prettier": "3.3.3",
     "typescript": "^5"
   }
