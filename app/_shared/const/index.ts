@@ -72,7 +72,7 @@ export const INTRODUCTIONS = {
   },
   TERRACE: {
     title: '자연속의 테라스',
-    src: '/bg/bg-sauna-77.webp',
+    src: '/bg/bg-balcony.webp',
   },
   RESTAURANT: {
     title: '맛있는 식사가 있는 찜질방',
